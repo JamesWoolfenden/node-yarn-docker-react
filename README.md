@@ -40,9 +40,15 @@ And running it:
 ```
 docker run -p 5000:5000 node-yarn-react-docker
 ```
+You can get a pre-built version from the docker repo using:
+
+```
+docker run -p 5000:5000 jameswoolfenden/node-yarn-docker-react
+```
 
 Then browse to http://localhost:5000 and you should see a game of noughts and crosses,
 that doesn't work for you try your at $dockerhost:5000 -e.g. 192.168.xx.xxx:5000 (of $env:DOCKER_HOST)
+
 
 Conclusions
 The pipeline was pretty easy to adapt, I had some problem with using the works VPN.
