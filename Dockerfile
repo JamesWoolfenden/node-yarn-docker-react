@@ -1,19 +1,23 @@
+
+# You should always specify a full version here to ensure all of your developers
+# are running the same version of Node.
 FROM node:7.8.0
 
-ENV NODE_ENV production
+# Override the base log level (info).
 ENV NPM_CONFIG_LOGLEVEL warn
 
-#RUN npm install -g yarn
-RUN yarn global add serve
+# Install and configure `serve`.
+RUN npm install -g serve
+CMD serve -s build
+EXPOSE 5000
 
-# copy the files
+# Install all dependencies of the current project.
+COPY package.json package.json
+COPY npm-shrinkwrap.json npm-shrinkwrap.json
+RUN npm install
+
+# Copy all local files into the image.
 COPY . .
 
-# build it
-RUN yarn run build --production
-
-# Run serve when the image is run.
-CMD serve -s build
-
-# Let Docker know about the port that serve runs on.
-EXPOSE 5000
+# Build for production.
+RUN npm run build --production
