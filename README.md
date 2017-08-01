@@ -26,7 +26,7 @@ You need to create a docker-machine host like this:
 docker-machine create --driver virtualbox default
 ```
 
-Righto, now its on.
+Righto, now its on. I'm assuming you've cloned this repo and are working in at shell where you cloned it.
 
 Building the container:
 ```
@@ -38,11 +38,11 @@ docker run -p 5000:5000 node-yarn-react-docker
 ```
 
 Then browse to http://localhost:5000 and you should see a game of noughts and crosses,
-that doesn't work for you try your at $dockerhost:5000 -e.g. 192.168.xx.xxx:5000 (of $env:DOCKE_HOST)
+that doesn't work for you try your at $dockerhost:5000 -e.g. 192.168.xx.xxx:5000 (of $env:DOCKER_HOST)
 
 Conclusions
 The pipeline was pretty easy to adapt, I had some problem with using the works VPN.
-Comments improvements welcome. Do try out the Facebook tutorial is good.
+Comments improvements welcome. Do try out the Facebook tutorial is it very good.
 
 Adapted from :
 1. https://medium.com/ai2-blog/dockerizing-a-react-application-3563688a2378
