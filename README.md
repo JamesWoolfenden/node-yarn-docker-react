@@ -7,7 +7,11 @@ Docker...
 If your running on Linux/Ubuntu you probably have this all already, if not, i'm sure you can Google that.
 
 For anyone else on other platform:
-Make sure you have the docker toolbox installed (brew/choco) from here: https://www.docker.com/products/docker-toolbox.
+Make sure you have the docker toolbox installed, available from here:
+Mac https://download.docker.com/mac/stable/DockerToolbox.pkg
+
+Win 10
+https://download.docker.com/win/stable/DockerToolbox.exe
 
 Once you've installed it verify is running. You should this when you call docker-machine ls.
 
