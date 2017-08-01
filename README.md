@@ -1,5 +1,5 @@
 # node-yarn-docker-react
-Like the repo says... I wanted a example that had real code in it and that had the tools I normally use but dockerised. A boilerplate/prototype docker yarn REACT pipeline.
+Like the repo says... I wanted an example that had real code in it and that had the tools I normally use but dockerised. A boilerplate/prototype docker yarn REACT pipeline.
 
 Requirements
 Docker...
