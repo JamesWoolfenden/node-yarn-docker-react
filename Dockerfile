@@ -19,4 +19,4 @@ RUN yarn
 COPY . .
 
 # Build for production.
-#RUN yarn run build --production
+RUN yarn run build --production
