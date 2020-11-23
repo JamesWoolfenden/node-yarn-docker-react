@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("releaseworks/hellonode")
+        app = docker.build("jameswoolfenden/nodeyarn")
     }
 
     stage('Test image') {
@@ -24,6 +24,9 @@ node {
     }
 
     stage('Push image') {
+        rtPublishBuildInfo (
+            serverId: 'myserver'
+         }
         /* Finally, we'll push the image with two tags:
          * First, the incremental build number from Jenkins
          * Second, the 'latest' tag.
