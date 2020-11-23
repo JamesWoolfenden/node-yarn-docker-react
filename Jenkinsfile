@@ -27,14 +27,12 @@ node {
         
         rtDockerPush(
             serverId: 'myserver',
-            image: 'qaslalom.jfrog.io/docker-quickstart-local/nodeyarn:latest',
+            image: 'https://qaslalom.jfrog.io/artifactory/docker-quickstart-local/nodeyarn:latest',
             targetRepo: 'local-repo',
             // Attach custom properties to the published artifacts:
-            properties: 'project-name=docker1;status=stable',
-            // Jenkins spawns a new java process during this step's execution.
-            // You have the option of passing any java args to this new process.
-            javaArgs: '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'
+            properties: 'project-name=docker1;status=stable'
             )
+
         rtPublishBuildInfo (
             serverId: 'myserver'
         )
