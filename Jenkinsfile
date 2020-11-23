@@ -27,7 +27,7 @@ node {
         
         rtDockerPush(
             serverId: 'myserver',
-            image: 'https://qaslalom.jfrog.io/artifactory/docker-quickstart-local/nodeyarn:latest',
+            image: 'qaslalom.jfrog.io/docker-quickstart-local/nodeyarn:latest',
             targetRepo: 'local-repo',
             // Attach custom properties to the published artifacts:
             properties: 'project-name=docker1;status=stable'
