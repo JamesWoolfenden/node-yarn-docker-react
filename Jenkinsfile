@@ -27,7 +27,7 @@ node {
         
         rtDockerPush(
             serverId: 'myserver',
-            image: ARTIFACTORY_DOCKER_REGISTRY + '/hello-world:latest',
+            image: "docker-quickstart-local/hello-world:latest',
             targetRepo: 'docker-quickstart-local',
             // Attach custom properties to the published artifacts:
             properties: 'project-name=docker1;status=stable',
@@ -35,7 +35,7 @@ node {
             // You have the option of passing any java args to this new process.
             javaArgs: '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'
             )
-            
+
         rtPublishBuildInfo (
             serverId: 'myserver'
         )
