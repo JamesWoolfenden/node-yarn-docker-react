@@ -37,4 +37,23 @@ node {
             serverId: 'myserver'
         )
     }
+
+    stage('Promote') {
+        serverId: 'my-server',
+        // Name of target repository in Artifactory
+        targetRepo: 'stage-docker-quickstart-local',
+        
+        // Optional parameters
+        // Comment and Status to be displayed in the Build History tab in Artifactory
+        comment: 'this is the promotion comment',
+        status: 'Released',
+        // Specifies the source repository for build artifacts.
+        sourceRepo: 'docker-quickstart-local',
+        // Indicates whether to promote the build dependencies, in addition to the artifacts. False by default.
+        includeDependencies: true,
+        // Indicates whether to fail the promotion process in case of failing to move or copy one of the files. False by default
+        failFast: true,
+        // Indicates whether to copy the files. Move is the default.
+        copy: true
+    }
 }
