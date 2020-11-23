@@ -27,7 +27,7 @@ node {
         
         rtDockerPush(
             serverId: 'myserver',
-            image: "docker-quickstart-local/hello-world:latest',
+            image: 'docker-quickstart-local/hello-world:latest',
             targetRepo: 'docker-quickstart-local',
             // Attach custom properties to the published artifacts:
             properties: 'project-name=docker1;status=stable',
