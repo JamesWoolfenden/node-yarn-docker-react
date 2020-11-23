@@ -40,7 +40,7 @@ node {
 
     stage('Promote') {
         rtPromote (
-        serverId: 'my-server',
+        serverId: 'myserver',
         // Name of target repository in Artifactory
         targetRepo: 'stage-docker-quickstart-local',
         
