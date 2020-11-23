@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("jameswoolfenden/nodeyarn")
+        app = docker.build("nodeyarn")
     }
 
     stage('Test image') {
@@ -27,8 +27,8 @@ node {
         
         rtDockerPush(
             serverId: 'myserver',
-            image: 'nodeyarn',
-            targetRepo: 'qaslalom.jfrog.io/docker-quickstart-local',
+            image: 'qaslalom.jfrog.io/docker-quickstart-local/nodeyarn:latest',
+            targetRepo: 'docker-local',
             // Attach custom properties to the published artifacts:
             properties: 'project-name=docker1;status=stable'
             )
