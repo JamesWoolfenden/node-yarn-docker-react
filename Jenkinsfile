@@ -39,6 +39,7 @@ node {
     }
 
     stage('Promote') {
+        rtPromote (
         serverId: 'my-server',
         // Name of target repository in Artifactory
         targetRepo: 'stage-docker-quickstart-local',
@@ -55,5 +56,6 @@ node {
         failFast: true,
         // Indicates whether to copy the files. Move is the default.
         copy: true
+        )
     }
 }
